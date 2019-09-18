@@ -1,6 +1,6 @@
 {
   "name": "timo-jsutil",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "util for javascript",
   "main": "index.js",
   "scripts": {

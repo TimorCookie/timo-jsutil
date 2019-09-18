@@ -22,25 +22,40 @@ export const setUrlPrmt= (obj)=> {
 }
 
 // UTC时间转化为本地时区时间（UTC时间格式一般为 "2017-11-16T05:23:20.000Z"）；
-export const convertUTCTimeToLocalTime=(UTCDateString,needDetail)=> {
+export const convertUTCTimeToLocalTime=(utc_datetime,needDetail)=> {
     // needDetail 为true表示需要具体时间，未传表示只需日期
-    if(!UTCDateString){
+    if(!utc_datetime){
         return '-';
       }
-    function formatFunc(str) {    //格式化显示
+    function handleNum(str) {    //格式化显示
         return str > 9 ? str : '0' + str
       }
-    const date = new Date(Date.parse(UTCDateString));
-    const year = date.getUTCFullYear();
-    const month = formatFunc(date.getUTCMonth()+1);
-    const day = formatFunc(date.getUTCDate());
-    const h = formatFunc(date.getUTCHours()+8);
-    const m = formatFunc(date.getUTCMinutes());
-    const s = formatFunc(date.getUTCSeconds());
-    if(!needDetail) {
-        return `${year}-${month}-${day}`
+    // 转为正常的时间格式 年-月-日 时:分:秒
+    var T_pos = utc_datetime.indexOf('T');
+    var Z_pos = utc_datetime.indexOf('Z');
+    var year_month_day = utc_datetime.substr(0,T_pos);
+    var hour_minute_second = utc_datetime.substr(T_pos+1,Z_pos-T_pos-1);
+    var new_datetime = year_month_day+" "+hour_minute_second; // 2017-03-31 08:02:06
+  
+    // 处理成为时间戳
+    timestamp = new Date(Date.parse(new_datetime));
+    timestamp = timestamp.getTime();
+    timestamp = timestamp/1000;
+    
+    // 增加8个小时，北京时间比utc时间多八个时区
+    var timestamp = timestamp+8*60*60;
+    // 时间戳转为时间
+    var time= new Date(parseInt(timestamp) * 1000)
+    var y = time.getFullYear(); //getFullYear方法以四位数字返回年份
+    var M = time.getMonth() + 1; // getMonth方法从 Date 对象返回月份 (0 ~ 11)，返回结果需要手动加一
+    var d = time.getDate(); // getDate方法从 Date 对象返回一个月中的某一天 (1 ~ 31)
+    var h = time.getHours(); // getHours方法返回 Date 对象的小时 (0 ~ 23)
+    var m = time.getMinutes(); // getMinutes方法返回 Date 对象的分钟 (0 ~ 59)
+    var s = time.getSeconds(); // getSeconds方法返回 Date 对象的秒数 (0 ~ 59)
+    if(needDetail) {
+        return y + '-' +handleNum(M) + '-' + handleNum(d) + ' ' + handleNum(h) + ':' + handleNum(m) + ':' + handleNum(s);
     } else {
-        return `${year}-${month}-${day} ${h}:${m}:${s}`
+        return y + '-' +handleNum(M) + '-' + handleNum(d) 
     }
 }
 

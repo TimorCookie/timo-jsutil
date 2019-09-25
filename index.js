@@ -66,6 +66,19 @@ export const Lstorage = {
     }
 
 }
+
+export const judgeClient= ()=> {
+    let client = '';
+    if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  //判断iPhone|iPad|iPod|iOS
+      client = 'IOS';
+    } else if (/(Android)/i.test(navigator.userAgent)) {  //判断Android
+      client = 'Android';
+    } else {
+      client = 'PC';
+    }
+    return client;
+  }
+
 export const isCellphoneValid = (phone)=>{
     if(!phone) return false;
     return (/^1[34578]\d{9}$/.test(phone) || /^1(99)|(98)|(66)\d{8}$/.test(phone))

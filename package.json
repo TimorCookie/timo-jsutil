@@ -2,9 +2,12 @@
   "name": "timo-jsutil",
   "version": "1.0.3",
   "description": "util for javascript",
-  "main": "index.js",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development rollup -c",
+    "build": "NODE_ENV=production rollup -c"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/TimorCookie/timo-jsutil/issues"
   },
-  "homepage": "https://github.com/TimorCookie/timo-jsutil#readme"
+  "homepage": "https://github.com/TimorCookie/timo-jsutil#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "rollup": "^2.0.6",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.3.0"
+  }
 }

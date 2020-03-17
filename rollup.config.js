@@ -2,20 +2,20 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
 import { terser } from 'rollup-plugin-terser';
-import {name, main, module} from './package.json';
+import pkg from './package.json';
 import babel from 'rollup-plugin-babel';
 
 export default {
     input: 'src/index.js',
     output:[
         {
-            file: main,
-            name,
+            file: pkg.main,
+            name: pkg.name,
             format: 'cjs'
         },
         {
-            file: module,
-            name,
+            file: pkg.module,
+            name: pkg.name,
             format: 'es'
         }
     ],

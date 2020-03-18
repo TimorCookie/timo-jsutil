@@ -8,9 +8,9 @@ module.exports = {
         cleverLinks: false,
         monospaceLinks: false,
         logo: {
-            url: 'https://qiniucdn.jiliguala.com/dev/promo/989eadf59f464934a4f2c98305b656bc.png',
-            width: '72.5px',
-            height: '32.5px',
+            url: 'https://qiniucdn.jiliguala.com/dev/promo/b158cc65587b4827a40b5941f4274b00.png',
+            width: '75px',
+            height: '78px',
             link: 'https://github.com/TimorCookie'
         },
         name: 'timo-util',

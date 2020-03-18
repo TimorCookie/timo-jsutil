@@ -147,3 +147,68 @@ export const isIDValid = (id) => {
     if (!id) return false;
     return (/^\d{6}(18|19|20)?\d{2}(0[1-9]|1[12])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/i.test(id))
 }
+/**
+ * @function debounce
+ * @description 函数防抖
+ * @param { function } func -需要使用防抖的函数
+ * @param { number } wait -延迟执行毫秒数
+ * @param { boolean } immediate  true 表立即执行，false 表非立即执行
+ * @returns {Void} 
+ */
+export function debounce(func,wait,immediate) {
+    let timeout;
+    return function () {
+        let context = this;
+        let args = arguments;
+
+        if (timeout) clearTimeout(timeout);
+        if (immediate) {
+            let callNow = !timeout;
+            timeout = setTimeout(() => {
+                timeout = null;
+            }, wait);
+            if (callNow) func.apply(context, args)
+        }
+        else {
+            timeout = setTimeout(() => {
+                func.apply(context, args)
+            }, wait);
+        }
+    }
+}
+/**
+ * @function throttle
+ * @description 函数节流
+ * @param { function } func -函数
+ * @param { number } wait -延迟执行毫秒数
+ * @param { number } type -1 表时间戳版，2 表定时器版
+ * @returns {Void} 
+ */
+export function throttle(func, wait ,type) {
+    let previous, timeout;
+    if(type===1){
+        previous = 0;
+    }else if(type===2){
+        timeout = null;
+    }
+    return function() {
+        let context = this;
+        let args = arguments;
+        if(type===1){
+            let now = Date.now();
+
+            if (now - previous > wait) {
+                func.apply(context, args);
+                previous = now;
+            }
+        }else if(type===2){
+            if (!timeout) {
+                timeout = setTimeout(() => {
+                    timeout = null;
+                    func.apply(context, args)
+                }, wait)
+            }
+        }
+
+    }
+}

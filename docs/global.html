@@ -34,7 +34,7 @@
         <ul></ul>
     </div>
     
-    <div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#formatUTCTime">formatUTCTime</a></li><li><a href="global.html#getHashQueryString">getHashQueryString</a></li><li><a href="global.html#getQueryVariable">getQueryVariable</a></li><li><a href="global.html#isCellphoneValid">isCellphoneValid</a></li><li><a href="global.html#isIDValid">isIDValid</a></li><li><a href="global.html#judgeClient">judgeClient</a></li><li><a href="global.html#Lstorage">Lstorage</a></li><li><a href="global.html#setUrlPrmt">setUrlPrmt</a></li></ul></div>
+    <div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#formatUTCTime">formatUTCTime</a></li><li><a href="global.html#getHashQueryString">getHashQueryString</a></li><li><a href="global.html#getQueryVariable">getQueryVariable</a></li><li><a href="global.html#isCellphoneValid">isCellphoneValid</a></li><li><a href="global.html#isIDValid">isIDValid</a></li><li><a href="global.html#judgeClient">judgeClient</a></li><li><a href="global.html#Lstorage">Lstorage</a></li><li><a href="global.html#setUrlPrmt">setUrlPrmt</a></li><li><a href="global.html#throttle">throttle</a></li></ul></div>
 </nav>
 <div id="resizer"></div>
 
@@ -79,7 +79,7 @@
     
     <div class="container-source members">
         <code><a href="index.js.html">index.js</a></code>,
-        <code><a href="index.js.html#line95">line 95</a></code>
+        <code><a href="index.js.html#line96">line 96</a></code>
     </div>
     
 </h4>
@@ -159,6 +159,210 @@
 
 <dt>
     
+        <h4 class="name" id="debounce">
+            
+                <span class="type-signature"></span>debounce<span class="signature">(func, wait, immediate)</span><span class="type-signature"> &rarr; {Void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="index.js.html">index.js</a></code>,
+                <code><a href="index.js.html#line151">line 151</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        函数防抖
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">需要使用防抖的函数</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>wait</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">延迟执行毫秒数</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>immediate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">true 表立即执行，false 表非立即执行</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
         <h4 class="name" id="formatUTCTime">
             
                 <span class="type-signature"></span>formatUTCTime<span class="signature">(utc_datetime, needDetail)</span><span class="type-signature"> &rarr; {String}</span>
@@ -166,7 +370,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line53">line 53</a></code>
+                <code><a href="index.js.html#line54">line 54</a></code>
             </div>
             
         </h4>
@@ -519,7 +723,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line18">line 18</a></code>
+                <code><a href="index.js.html#line19">line 19</a></code>
             </div>
             
         </h4>
@@ -684,7 +888,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line128">line 128</a></code>
+                <code><a href="index.js.html#line129">line 129</a></code>
             </div>
             
         </h4>
@@ -849,7 +1053,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line139">line 139</a></code>
+                <code><a href="index.js.html#line140">line 140</a></code>
             </div>
             
         </h4>
@@ -1014,7 +1218,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line111">line 111</a></code>
+                <code><a href="index.js.html#line112">line 112</a></code>
             </div>
             
         </h4>
@@ -1129,7 +1333,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line35">line 35</a></code>
+                <code><a href="index.js.html#line36">line 36</a></code>
             </div>
             
         </h4>
@@ -1277,6 +1481,210 @@
         <h5>Example</h5>
         
     <pre class="prettyprint"><code>setUrlPrmt({itemid: 'mp12',source: 'wechat'})</code></pre>
+
+    
+
+</dd>
+
+            
+                
+
+<dt>
+    
+        <h4 class="name" id="throttle">
+            
+                <span class="type-signature"></span>throttle<span class="signature">(func, wait, type)</span><span class="type-signature"> &rarr; {Void}</span>
+                
+            
+            <div class="container-source members">
+                <code><a href="index.js.html">index.js</a></code>,
+                <code><a href="index.js.html#line180">line 180</a></code>
+            </div>
+            
+        </h4>
+
+        
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        函数节流
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-params">
+        <h5>Parameters:</h5>
+        
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">函数</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>wait</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">延迟执行毫秒数</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">1 表时间戳版，2 表定时器版</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    </div>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <div class="container-returns">
+        <h5>Returns:</h5>
+        
+                
+
+
+
+<span class="param-type">Void</span>
+
+
+
+
+
+
+
+
+            
+    </div>
+    
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
 
     
 

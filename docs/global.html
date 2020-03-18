@@ -34,7 +34,7 @@
         <ul></ul>
     </div>
     
-    <div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#formatUTCTime">formatUTCTime</a></li><li><a href="global.html#getHashQueryString">getHashQueryString</a></li><li><a href="global.html#getQueryVariable">getQueryVariable</a></li><li><a href="global.html#isCellphoneValid">isCellphoneValid</a></li><li><a href="global.html#isIDValid">isIDValid</a></li><li><a href="global.html#judgeClient">judgeClient</a></li><li><a href="global.html#setUrlPrmt">setUrlPrmt</a></li></ul></div>
+    <div class="lnb-api hidden"><h3>Global</h3><ul><li><a href="global.html#formatUTCTime">formatUTCTime</a></li><li><a href="global.html#getHashQueryString">getHashQueryString</a></li><li><a href="global.html#getQueryVariable">getQueryVariable</a></li><li><a href="global.html#isCellphoneValid">isCellphoneValid</a></li><li><a href="global.html#isIDValid">isIDValid</a></li><li><a href="global.html#judgeClient">judgeClient</a></li><li><a href="global.html#Lstorage">Lstorage</a></li><li><a href="global.html#setUrlPrmt">setUrlPrmt</a></li></ul></div>
 </nav>
 <div id="resizer"></div>
 
@@ -68,6 +68,88 @@
     
 
     
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+
+<dt>
+<h4 class="name" id="Lstorage">
+    <span class="type-signature"><span class="icon green">constant</span> </span>Lstorage<span class="type-signature"></span>
+    
+    <div class="container-source members">
+        <code><a href="index.js.html">index.js</a></code>,
+        <code><a href="index.js.html#line95">line 95</a></code>
+    </div>
+    
+</h4>
+
+
+</dt>
+<dd>
+    
+    <div class="description">
+        封装的全局本地存储对象，包含set,get，remove,clear方法
+    </div>
+    
+
+    <!--
+    
+    -->
+
+    
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+    
+
+    
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>Lstorage.get('user')</code></pre>
+
+    <pre class="prettyprint"><code>Lstorage.set('user',{name: 'timokie})</code></pre>
+
+    <pre class="prettyprint"><code>Lstorage.remove('user')</code></pre>
+
+    
+</dd>
+
+        </dl>
+    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -84,7 +166,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line50">line 50</a></code>
+                <code><a href="index.js.html#line53">line 53</a></code>
             </div>
             
         </h4>
@@ -205,6 +287,8 @@
 
 
 
+- time -格式化后的时间
+
 
 
 
@@ -248,6 +332,11 @@
     
 </dl>
 
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>formatUTCTime("2017-11-16T05:23:20.000Z", true)</code></pre>
 
     
 
@@ -363,6 +452,8 @@
 
 
 
+- value -需要获取的参数值
+
 
 
 
@@ -408,6 +499,11 @@
 
 
     
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>getHashQueryString('itemid')</code></pre>
+
+    
 
 </dd>
 
@@ -423,7 +519,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line17">line 17</a></code>
+                <code><a href="index.js.html#line18">line 18</a></code>
             </div>
             
         </h4>
@@ -521,6 +617,8 @@
 
 
 
+- value -需要获取的参数值
+
 
 
 
@@ -566,6 +664,11 @@
 
 
     
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>getQueryVariable('type')</code></pre>
+
+    
 
 </dd>
 
@@ -581,7 +684,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line116">line 116</a></code>
+                <code><a href="index.js.html#line128">line 128</a></code>
             </div>
             
         </h4>
@@ -679,6 +782,8 @@
 
 
 
+- true/false -是否为手机号的判断
+
 
 
 
@@ -724,6 +829,11 @@
 
 
     
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>isCellphoneValid(17621251706)</code></pre>
+
+    
 
 </dd>
 
@@ -739,7 +849,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line126">line 126</a></code>
+                <code><a href="index.js.html#line139">line 139</a></code>
             </div>
             
         </h4>
@@ -837,6 +947,8 @@
 
 
 
+- true/false -是否为身份证号的判断
+
 
 
 
@@ -882,6 +994,11 @@
 
 
     
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>isIDValid(100192833402051724)</code></pre>
+
+    
 
 </dd>
 
@@ -897,7 +1014,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line100">line 100</a></code>
+                <code><a href="index.js.html#line111">line 111</a></code>
             </div>
             
         </h4>
@@ -945,6 +1062,8 @@
 
 
 
+- system -设备系统
+
 
 
 
@@ -990,6 +1109,11 @@
 
 
     
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>judgeClient()</code></pre>
+
+    
 
 </dd>
 
@@ -1005,7 +1129,7 @@
             
             <div class="container-source members">
                 <code><a href="index.js.html">index.js</a></code>,
-                <code><a href="index.js.html#line33">line 33</a></code>
+                <code><a href="index.js.html#line35">line 35</a></code>
             </div>
             
         </h4>
@@ -1103,6 +1227,8 @@
 
 
 
+- url -设置后的url
+
 
 
 
@@ -1146,6 +1272,11 @@
     
 </dl>
 
+
+    
+        <h5>Example</h5>
+        
+    <pre class="prettyprint"><code>setUrlPrmt({itemid: 'mp12',source: 'wechat'})</code></pre>
 
     
 

@@ -2,7 +2,8 @@
  * @function getHashQueryString
  * @description 获取哈希url参数值
  * @param {string} name - 需要获取的参数key.
- * @returns {String}
+ * @returns {String} value -需要获取的参数值
+ * @example getHashQueryString('itemid')
  */
 
 export const getHashQueryString = (name) => {
@@ -18,7 +19,8 @@ export const getHashQueryString = (name) => {
  * @function getQueryVariable
  * @description 获取非哈希url参数
  * @param {string} key - 需要获取的参数key.
- * @returns {String}
+ * @returns {String} value -需要获取的参数值
+ * @example getQueryVariable('type')
  */
 export const getQueryVariable = (key) => {
     var query = window.location.search.substring(1);
@@ -34,7 +36,8 @@ export const getQueryVariable = (key) => {
  * @function setUrlPrmt
  * @description 设置url参数
  * @param {Object} obj - 需要设置的参数对象
- * @returns {String}
+ * @returns {String} url -设置后的url
+ * @example setUrlPrmt({itemid: 'mp12',source: 'wechat'})
  */
 export const setUrlPrmt = (obj) => {
     let _rs = [];
@@ -52,7 +55,8 @@ export const setUrlPrmt = (obj) => {
  * @description UTC时间转化为本地时区时间（UTC时间格式一般为 "2017-11-16T05:23:20.000Z"）；
  * @param {String} utc_datetime - UTC时间
  * @param {String} needDetail - 是否需要细化到时分秒
- * @returns {String}
+ * @returns {String} time -格式化后的时间
+ * @example formatUTCTime("2017-11-16T05:23:20.000Z", true)
  */
 export const formatUTCTime = (utc_datetime, needDetail) => {
     if (!utc_datetime) {
@@ -80,7 +84,14 @@ export const formatUTCTime = (utc_datetime, needDetail) => {
         return y + '-' + handleNum(M) + '-' + handleNum(d)
     }
 }
-
+/**
+ * @global
+ * @description 封装的全局本地存储对象，包含set,get，remove,clear方法
+ * @example Lstorage.get('user')
+ * @example Lstorage.set('user',{name: 'timokie})
+ * @example Lstorage.remove('user')
+ * @returns {Void} 
+ */
 export const Lstorage = {
 
     set: (key, val, store = window.localStorage) => {
@@ -100,7 +111,8 @@ export const Lstorage = {
 /**
  * @function judgeClient
  * @description 判断用户设备系统
- * @returns {String}
+ * @returns {String} system -设备系统
+ * @example judgeClient()
  */
 export const judgeClient = () => {
     let client = '';
@@ -117,7 +129,8 @@ export const judgeClient = () => {
  * @function isCellphoneValid
  * @description 判断是否为手机号
  * @param {Number} phone - 手机号
- * @returns {Boolean}
+ * @returns {Boolean} true/false -是否为手机号的判断
+ * @example isCellphoneValid(17621251706)
  */
 export const isCellphoneValid = (phone) => {
     if (!phone) return false;
@@ -127,7 +140,8 @@ export const isCellphoneValid = (phone) => {
  * @function isIDValid
  * @description 判断是否为身份证号
  * @param {Number} id - 身份证
- * @returns {Boolean}
+ * @returns {Boolean} true/false -是否为身份证号的判断
+ * @example isIDValid(100192833402051724)
  */
 export const isIDValid = (id) => {
     if (!id) return false;

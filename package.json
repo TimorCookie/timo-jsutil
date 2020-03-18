@@ -9,7 +9,7 @@
     "dev": "NODE_ENV=development rollup -c",
     "build": "NODE_ENV=production rollup -c",
     "mocha-test": "mocha test/index.test.js",
-    "jsdoc": "jsdoc -c ./jsdoc.config.js"
+    "jsdoc": "jsdoc -c ./jsdoc.config.js --readme ./README.md "
   },
   "repository": {
     "type": "git",

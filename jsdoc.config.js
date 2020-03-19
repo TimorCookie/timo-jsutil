@@ -13,7 +13,7 @@ module.exports = {
             height: '78px',
             link: 'https://github.com/TimorCookie'
         },
-        name: 'timo-util',
+        name: 'timo-jsutil',
         footerText: ' '
     },
     opts: {

@@ -10,7 +10,7 @@
     "build": "NODE_ENV=production rollup -c",
     "mocha-test": "mocha test/index.test.js",
     "jsdoc": "jsdoc -c ./jsdoc.config.js --readme ./README.md ",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "repository": {
     "type": "git",
